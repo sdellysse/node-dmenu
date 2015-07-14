@@ -99,15 +99,11 @@ Object.assign(Dmenu.prototype, {
     },
 
     display: function (items) {
-        return this.displayWithPrompt(null, items);
+        return this.displayWithPrompt(prompt.get(this), items);
     },
 
     displayWithPrompt: function (promptString, items) {
         const args = [];
-
-        if (promptString === null) {
-            promptString = prompt.get(this);
-        }
 
         items.forEach(item => {
             if (typeof item !== "string") {

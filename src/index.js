@@ -1,8 +1,9 @@
 "use strict";
 
 const Dmenu = require("./Dmenu");
+Dmenu.defaults.prompt = "Whatssup";
 
-Dmenu.displayWithPrompt("Can't Touch This:", [
+Dmenu.display([
     "My my my",
     "Music makes me so hard",
     "Makes me think oh my lord",
